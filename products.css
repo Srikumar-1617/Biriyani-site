@@ -1,0 +1,426 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.my-container{
+    padding: 0px !important;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/*  ..........................front animation................................. */
+
+.start-animation{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color:#5E0006;
+    z-index: 999;
+    animation: back 3s linear forwards;
+}
+.start-ani-logo{
+    height: 100px;
+    width: 100px;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /* animation-delay: 1s; */
+
+}
+@keyframes back {
+    0%{
+        opacity: 1;
+    }
+     50%{
+        opacity: 0.5;
+    }
+     100%{
+        opacity: 0;
+    }
+    
+}
+@keyframes logo {
+    0%{
+        scale: 1;
+        opacity: 1;
+    }
+     50%{
+        scale: 2;
+        opacity: 0.5;
+    }
+     100%{
+        scale: 5;
+        opacity: 0;
+    }
+
+    
+}
+
+
+/*  ..........................navbar................................. */
+nav{
+    background-color: #5E0006 !important;
+    padding: 0px 60px !important;
+    justify-content: space-between;
+    position: fixed !important;
+    width: 100%;
+    top: 0px;
+    z-index: 989;
+    transform-style: preserve-3d;
+}
+.nav-a{
+    position:relative;
+    color:#fff;
+    text-decoration:none;
+    margin:20px;
+    padding:10px;
+    transition:0.3s;
+}
+.nav-a:hover{
+    color:#FCBF49 !important;
+}
+.dec{
+    text-decoration: none;
+    color: white;
+}
+.nav-a::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:0%;
+    height:2px;
+    background:#00ffff;
+    transition:0.4s;
+    transform:translateX(-50%);
+}
+
+.nav-a:hover::before{
+    width:100%!important;
+}
+
+
+.logo-akm{
+    height: 65px;
+    width: 65px;
+    transition: all 1s;
+}
+.logo-akm:hover{
+    transform: rotateY(180deg);
+}
+.nav-option{
+    color: white;
+    font-size: 16px;   
+}
+.nav-option a{
+    margin-left: 30px;
+    border-bottom: 2px solid #FCBF49;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+    
+}
+
+.nav-option a:hover{
+    border-bottom: 2px solid ;
+    color: #00ffff;
+    transform: scale(1.5);
+    animation: navbar 1s linear forwards;
+}
+.our-drop{
+    text-align: center;
+}
+.nav-bar-label{
+    display: none;
+    border: 2px solid transparent;
+    padding: 0px 5px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.nav-bar-input{
+    display: none;
+}
+
+ .resp-nav a{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+    padding: 3px 0px;
+    cursor: pointer; 
+} 
+
+ .own-btn{
+    position:relative;
+    padding:8px 10px;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    border: 1px solid #ac8e06;
+    overflow:hidden;
+    background:linear-gradient(135deg,#e59616,#d65252,#99c908);
+    background-size:300% 300%;
+    box-shadow:0 0 15px rgba(255, 136, 0, 0.5),0 0 30px rgba(175, 209, 6, 0.4);
+    transition:0.4s ease;
+    animation:loginbutton 6s ease infinite;
+}
+.own-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg, transparent, rgba(255,255,255,.7), transparent);
+    transition:0.6s;
+    
+}
+.own-btn:hover{
+    box-shadow:0 0 25px rgba(214, 210, 12, 0.8), 0 0 50px rgba(255, 149, 0, 0.6);
+}
+.own-btn:hover::before{
+    left:100%;
+}
+.own-btn:active{
+    transform:scale(.95);
+}
+.own-btn:active{
+    transform:scale(.95);
+} 
+
+@keyframes loginbutton{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/*  ..........................section................................. */
+
+section{
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px;
+    padding-top: 100px;
+    flex-wrap: wrap;
+    /* background-image: linear-gradient(to bottom right,rgb(177, 4, 18), rgb(132, 3, 95), rgb(255, 0, 0)); */
+
+}
+
+.sec-topic{
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 800;
+    color: lime;
+    margin-bottom: 40px;
+
+}
+.first-dish{
+    height: 270px;
+    width: 230px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px 2px grey;
+    padding-top: 15px;
+    background-color: transparent ;
+    transition: all 1s;
+}
+.first-dish:hover{
+    /* transform: scale(1.1); */
+    cursor: pointer;
+
+}
+.first-dish img{
+    height: 200px;
+    width: 210px;
+    border-radius: 15px;
+}
+.first-dish p{
+    margin-top: 10px;
+    font-size: 20px;
+    background-image: linear-gradient(rgb(235, 7, 7), rgb(255, 221, 0));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+
+}
+.line-1, .line-2, .line-3, .line-4, .line-5{
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.disn-name{
+    width: 100%;
+    z-index: 100;
+    height: 60px;
+    background-color: orange;
+}
+
+/*  ..........................footer................................. */
+footer{
+    height: 280px;
+    background-color: #5E0006;
+    position: relative;
+    padding: 30px;
+
+}
+.footer-1{
+    height: 195px;
+    flex-wrap: wrap;
+    margin-left: 120px;
+}
+.usefull{
+    color: white;
+    cursor: pointer;
+
+}
+.usefull p:hover{
+    color: blue;
+}
+.usefull p{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.usefull b{
+    color: #f0c507;
+    display: block;
+    margin-bottom: 10px;
+}
+.payment{
+    margin-left: 70px;
+    width: 15%;
+    text-align: center;
+    padding-bottom: 5px;
+    cursor: pointer;
+
+}
+.payment b{
+    color: #f0c507;
+    display: block;
+    margin-bottom: 10px;
+}
+.payment p{
+    color: rgb(6, 138, 6);
+    display: inline;
+    width: max-content;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 5px;
+    background-color: white;
+    margin-right: 5px;
+}
+.pay-visa{
+    height: 30px;
+    width: 55px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+}
+.venue{
+    margin-left: 70px;
+    position: relative;
+
+}
+.venue i{
+    color: white;
+    position: absolute;
+    top: 47px;
+}
+.venue b{
+    color: #f0c507;
+    display: block;
+    margin-bottom: 5px;
+}
+.ark{
+    display: inline;
+    font-size: 14px;
+    color: white;
+     margin-left: 24px;
+}
+.ark-2{
+
+    color: white;
+    font-size: 14px;
+    margin-left: 24px;
+    margin-bottom: 15px;
+}
+.gmap{
+    width: 150px;
+    height: 70px;
+}
+.contact{
+    margin-left: 70px;
+
+
+}
+.contact b{
+    color: #f0c507;
+    display: block;
+    margin-bottom: 10px;
+}
+.contact p{
+    display: inline;
+    color: white;
+}
+.call{
+    color: white;
+}
+.social{
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+.fb{
+    background-image: linear-gradient(rgb(55, 0, 255), rgb(118, 187, 247));
+}
+.wapp{
+    background-image: linear-gradient(rgb(5, 134, 31), rgb(215, 237, 217));
+}
+.twit{
+    background-image: linear-gradient(rgb(62, 3, 91), rgb(122, 188, 251));
+}
+.insta{
+    background-image: linear-gradient(rgb(238, 60, 208), rgb(185, 27, 253));
+}
+
+.footer-2{
+    border-top: 1px solid #f0c507;
+    display: flex;
+    color: #f0c507;
+    text-align: center;
+    justify-content: center;
+    height: 45px;
+
+}
+.footer-2 p{
+    top: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 0px 30px;
+    margin-top: 12px;
+    border-right: 1px solid yellow;
+}
+.loyal{
+    border-right: unset !important;
+}
+
+
+
+
+
